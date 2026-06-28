@@ -1,5 +1,5 @@
-owner: bast-art          # your GitHub username / org
-repo: kanji-status       # the repo you create from the template
+owner: SebaGoe
+repo: kanji-status
 
 sites:
   - name: KanjiPrep
@@ -30,7 +30,3 @@ status-website:
       href: https://kanjiprep.com
     - title: Help
       href: https://kanjiprep.com/help
-
-notifications:
-  - type: slack
-    channel: "#ops"         # remove this block if you're not using Slack alerts yet
