@@ -1,31 +1,36 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+owner: bast-art          # your GitHub username / org
+repo: kanji-status       # the repo you create from the template
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
+  - name: KanjiPrep
+    url: https://kanjiprep.com
+
+  - name: Web App
+    url: https://app.kanjiprep.com
+
+  - name: Institution Panel
+    url: https://staff.kanjiprep.com/institution/login
+    expectedStatusCodes:
+      - 200
+
+  - name: API
+    url: https://app.kanjiprep.com/api/v1/ping
+    expectedStatusCodes:
+      - 200
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.kanjiprep.com
+  name: KanjiPrep Status
+  logoUrl: https://kanjiprep.com/images/logo.png
+  theme: light
+  introTitle: "KanjiPrep Service Status"
+  introMessage: "Real-time status for KanjiPrep services. Historical uptime and incident reports are available below."
   navbar:
-    - title: Status
-      href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: KanjiPrep
+      href: https://kanjiprep.com
+    - title: Help
+      href: https://kanjiprep.com/help
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+notifications:
+  - type: slack
+    channel: "#ops"         # remove this block if you're not using Slack alerts yet
